@@ -124,6 +124,8 @@ defmodule LinkedMapSet do
       ** (LinkedMapSet.DuplicateValueError) value "a" is already present
   """
   @spec add_new!(__MODULE__.t(), any) :: __MODULE__.t()
+  def add_new!(linked_map_set, value)
+
   def add_new!(%__MODULE__{items: items} = lms, value) do
     if Map.has_key?(items, value) do
       raise DuplicateValueError, value: value
