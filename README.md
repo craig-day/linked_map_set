@@ -1,11 +1,21 @@
 # LinkedMapSet
 
-**TODO: Add description**
+A `LinkedMapSet` is an extension to [`MapSet`](https://hexdocs.pm/elixir/MapSet.html)
+that maintains ordering.
+
+It does this by keeping pointers to previous and next elements based on insert
+order.
+
+I built this to have a collection I can traverse in either direction, but also
+be able to remove items in less-than-linear time. I also didn't want something
+that needed to be sorted or rebalanced after each addition or removal.
+
+This uses [`Map`](https://hexdocs.pm/elixir/Map.html) underneath, much like
+[`MapSet`](https://hexdocs.pm/elixir/MapSet.html), so removing arbitrary items
+can happen in logarithmic time, rather than linear time that most sorted
+collections incur.
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `linked_map_set` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +25,6 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/linked_map_set](https://hexdocs.pm/linked_map_set).
+## Usage
 
+See the [documentation](https://hexdocs.pm/linked_map_set) for API reference and examples.
