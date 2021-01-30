@@ -45,7 +45,7 @@ defmodule LinkedMapSet.MixProject do
 
   defp docs do
     [
-      main: "LinkedMapSetSet",
+      main: "LinkedMapSet",
       extras: ["README.md"]
     ]
   end
